@@ -13,4 +13,4 @@ const makeButton = buttonName => {
   return button;
 };
 
-module.exports = makeButton;
+export {makeButton};
