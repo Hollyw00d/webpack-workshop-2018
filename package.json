@@ -7,12 +7,11 @@
     "webpack-dev-server": "webpack-dev-server",
     "webpack": "webpack",
     "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
-    "prod": "npm run webpack -- --env.mode production",
-    "dev": "npm run webpack-dev-server -- --env.mode development --hot",
-    "prod:typescript": "npm run prod -- --env.presets typescript",
+    "prod": "npm run webpack -- --env.presets typescript --env.mode production",
+    "dev": "npm run webpack-dev-server -- --env.presets typescript --env.mode development --hot",
     "prod:analyze": "npm run prod -- --env.presets analyze",
-    "prod:debug": "npm run debug -- --env.mode production",
-    "dev:debug": "npm run debug -- --env.mode development"
+    "prod:debug": "npm run debug -- --env.presets typescript --env.mode production",
+    "dev:debug": "npm run debug -- --env.presets typescript --env.mode development"
   },
   "repository": {
     "type": "git",
