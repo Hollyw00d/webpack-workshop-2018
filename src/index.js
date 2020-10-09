@@ -23,5 +23,6 @@ button.addEventListener('click', e => {
   });
 });
 
+
 document.body.appendChild(button);
 document.body.appendChild(image);
