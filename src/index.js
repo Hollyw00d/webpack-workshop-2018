@@ -1,4 +1,3 @@
-import { footer } from "./footer";
 import makeButton from "./button";
 import { makeColorStyle } from "./button-styles";
 import makeImage from "./image";
@@ -12,10 +11,17 @@ const sayHiObj = new ConsoleLogs();
 console.log(sayHiObj.sayHiFunc());
 
 // Vanilla JS
+const loadFooter = () => import("./footer");
+
 const image = makeImage(imageUrl);
 const button = makeButton("Yay! A Button!");
 button.style = makeColorStyle("cyan");
 
+button.addEventListener('click', e => {
+  loadFooter().then(m => {
+    document.body.appendChild(m.footer);
+  });
+});
+
 document.body.appendChild(button);
 document.body.appendChild(image);
-document.body.appendChild(footer);
