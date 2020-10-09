@@ -10,6 +10,7 @@
     "prod": "npm run webpack -- --env.presets typescript --env.mode production",
     "dev": "npm run webpack-dev-server -- --env.presets typescript --env.mode development --hot",
     "prod:analyze": "npm run prod -- --env.presets analyze",
+    "prod:compress": "npm run prod -- --env.preset compress",
     "prod:debug": "npm run debug -- --env.presets typescript --env.mode production",
     "dev:debug": "npm run debug -- --env.presets typescript --env.mode development"
   },
@@ -25,6 +26,7 @@
     "@babel/core": "^7.0.0-beta.46",
     "@babel/preset-env": "^7.0.0-beta.46",
     "babel-loader": "^8.0.0-beta",
+    "compression-webpack-plugin": "^6.0.2",
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "fork-ts-checker-webpack-plugin": "^0.4.1",
